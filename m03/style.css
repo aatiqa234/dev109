@@ -1,31 +1,23 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
-    color: #665544;
-    padding: 0 15% 0 15%;
-}
+	font-family: Helvetica, Arial, sans-serif;
+	color: #665544;
+	padding: 0 15% 0 15%;}
 h1, h2, p {
-  	padding: 12px;
+	padding: 12px;
 	line-height: 2em;}
-
-
 h1 {
-    text-align: center;
-    color: blue;
-    font-family: 'Dancing Script Regular';
-    font-size: 400%;
+  text-align: center;
+  color: blue;
+  font-family: 'DancingScriptRegular';
+  font-size: 400%;
 }
-
-i, a, a:hover, a:visited{
-    color: #665544;
-}
-
+a, a:hover, a:visited {
+	color: #665544;}
 p {
-    font-family: 'Dancing Script Regular';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 200%;
+  font-family: 'DancingScriptRegular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 200%;
 }
-
 i {
-    color: darkgreen;
-}
+  color: darkgreen;
