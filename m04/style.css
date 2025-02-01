@@ -6,16 +6,16 @@
 body {
 	width: 90%;
 	margin: 0 auto;
-       background-image: url("https://images.unsplash.com/photo-1624838000463-bcfb268be899?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://images.unsplash.com/photo-1624838000463-bcfb268be899?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
  #content {
 	overflow: auto;
 }
-    #nav, 
+	#nav, 
     #feature, 
     #footer {
-    margin:1%
+     margin:1%
 }
 #header h1{
   font-family: 'ArchivoRegular';
@@ -32,8 +32,8 @@ body {
     .column2,
     .column3{
     width: 31.3%;
-    float: left;
-    margin: 1%;
+	float: left;
+  	margin: 1%;
 }
     .column1{
     background-color:lightgreen;
@@ -41,8 +41,8 @@ body {
     .column2{
     background-color:skyblue;
 }
-    .column3 {
-     margin-right: 0%;
+	.column3 {
+	margin-right: 0%;
     background-color:hotpink;     
 }
 #footer{
@@ -56,19 +56,18 @@ body {
 	padding: 0.5em;
 }
 	#nav, 
-        #footer {
-        padding: 0.5em 0;
+    #footer {
+    padding: 0.5em 0;
 }
 	#feature, 
-        .article {
+    .article {
 	height: 10em;
 	margin-bottom: 1em;
 }
 #feature {
     background-color: #8CC63E;
-    background-image: url("...");
+    background-image: url("https://t3.ftcdn.net/jpg/02/70/35/00/360_F_270350073_WO6yQAdptEnAhYKM5GuA9035wbRnVJSr.jpg");
     background-size:contain;
     background-position: right;
     background-repeat:no-repeat;
 }
-
