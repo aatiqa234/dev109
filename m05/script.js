@@ -5,13 +5,13 @@ var msg = '<h2>Multiplication Table</h2>';              // Message
 
 if (operator === 'addition') {
   // Do addition
-  // while (i < 10) {
+  // while (i < 11) {
   //  msg += i + ' + ' + table + ' = ' + (i + table) + '<br />';
   // i++;
   }
 else {
   // Do multiplication
-  while (i < 10) {
+  while (i < 11) {
     msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
     i++;
   }
