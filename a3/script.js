@@ -9,28 +9,7 @@ downRight(pHeight, pColorEven, pColorOdd, pSymbol);
 upLeft(pHeight, pColorEven, pColorOdd, pSymbol);
 downLeft(pHeight, pColorEven, pColorOdd, pSymbol);
 }
-let rhombus="";
-for (let i=0; i<height; i++){
-  let line="&nbsp;".repeat(height-i-1);
-  
-  for (let j=0; j<2 *i+1; j++){
-    let color=j%2 ===0? colorEven: colorOdd; 
-    line += <span style="color:"></span>;
-  }
-  rhombusHTML+=line+"<br>";
-}
-  rhombus +=line +"\n";
-  for (let i=height -2; i>=0; i-- ){
-  let line="&nbsp;". repeat(height-i-1);
 
-  for (let j=0; j<2 *i+1; j++){
-    let color=j%2 ===0? colorEven: colorOdd; 
-    line += <span style="color:"></span>;
-  }
-  rhombus +=line +"\n";
-  }
-  document get.ElementByID("rhombusDisplay").innerHTML = rhombus;
-}
 function upRight(pHeight, pColorEven, pColorOdd, pSymbol){
 var rLine ="";
 for (i=0;i<pHeight;i++){
