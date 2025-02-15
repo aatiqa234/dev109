@@ -1,12 +1,11 @@
 body { 
-  font-family: Calibri, Candara, sans-serif;
-  margin: 0;
-  padding: 0; 
-  background: #e5e5e5;
-  color: #3f3f3f;
-  font-size: 16px;
-  line-height: 24px;
-  background-image: url("https://img.freepik.com/free-vector/white-background-with-binary-code-numbers_1017-37330.jpg?t=st=1739319237~exp=1739322837~hmac=3c60cff74719c37b979fd305e30a5c480a0dab6ec0cce23338afaa1d264749c2&w=1380");
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0; 
+background: #e5e5e5;
+color: #3f3f3f;
+font-size: 16px;
+line-height: 24px;
 }
 
 
