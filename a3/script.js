@@ -86,7 +86,7 @@ document.getElementById("upLeft").innerHTML = rLine;
 
 function downLeft(pHeight, pColorEven, pColorOdd, pSymbol){
     var rLine = "";
-    for (i = pHeight - 1; i >= 0; i--) 
+    for (i = pHeight - 1; i >= 0; i--) {
         rLine += "<p>";
         for (j = 0; j < pHeight; j++) {
             if (j < pHeight - i - 1) {
