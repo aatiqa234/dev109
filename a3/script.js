@@ -65,7 +65,7 @@ rLine +="<p>";
 //Create each line on the Rhombus
 for(j=0;j<pHeight;j++){
 if (j< pHeight-i){
-  rLine +="<span style='color:" pColorOdd + ";'>" pSymbol +"</span>";
+  rLine +="<span style='color:white;'>"+ pSymbol +"</span>";
 }
 //Is the position even or odd so we change the color
 else if (j%2==0)
@@ -91,7 +91,7 @@ rLine +="<p>";
 //Create each line on the Rhombus
 for(j=0;j<pHeight;j++){
 if (j< pHeight-i){
-  rLine +="<span style='color:" pColorOdd + ";'>" pSymbol +"</span>";
+  rLine +="<span style='color:white;'>"+ pSymbol +"</span>";
 }
 //Is the position even or odd so we change the color
 else if (j%2==0)
