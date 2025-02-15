@@ -31,7 +31,7 @@ a:hover {
   border-radius: 10px;
 }
 
-/* start styling for header */
+
 
 #header {
   -webkit-border-top-left-radius: 10px;
@@ -101,7 +101,7 @@ a:hover {
   background-color: #faf9f7;
 }
 
-/* start styling for footer */
+
 
 #footer { 
   -webkit-border-bottom-right-radius: 10px;
