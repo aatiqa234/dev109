@@ -11,16 +11,18 @@ downLeft(pHeight, pColorEven, pColorOdd, pSymbol);
 }
 let rhombus="";
 for (let i=0; i<height; i++){
-  let line="";
-  line +="". repeat (height-i-1);
+  let line="&nbsp;".repeat(height-i-1);
+  
   for (let j=0; j<2 *i+1; j++){
     let color=j%2 ===0? colorEven: colorOdd; 
     line += <span style="color:"></span>;
   }
+  rhombusHTML+=line+"<br>";
+}
   rhombus +=line +"\n";
   for (let i=height -2; i>=0; i-- ){
-  let line="";
-  line +="". repeat (height-i-1);
+  let line="&nbsp;". repeat(height-i-1);
+
   for (let j=0; j<2 *i+1; j++){
     let color=j%2 ===0? colorEven: colorOdd; 
     line += <span style="color:"></span>;
