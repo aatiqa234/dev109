@@ -90,7 +90,7 @@ function downLeft(pHeight, pColorEven, pColorOdd, pSymbol){
         rLine += "<p>";
         for (j = 0; j < pHeight; j++) {
             if (j < pHeight - i - 1) {
-                rLine += "<span style='color:white;'>" + pSymbol + "</span>";// White *
+                rLine += "<span style='color:white;'>" + pSymbol + "</span>";
             } 
             else if (j % 2 == 0) {
                 rLine += "<span style='color:" + pColorEven + ";'>" + pSymbol + "</span>";
