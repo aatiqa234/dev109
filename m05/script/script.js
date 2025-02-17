@@ -7,8 +7,7 @@ if (table < 1 || table > 10){
   table =0;
 }
 
-else {
-  // Do multiplication
+
   while (i < 11) {
     msg += i + ' x ' + table + ' = ' + (i * table) + '<br />';
     i++;
