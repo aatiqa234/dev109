@@ -1,32 +1,39 @@
-body { 
+/* General Reset */
+body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0; 
+    padding: 0;
     background: #e5e5e5;
     color: #3f3f3f;
     font-size: 16px;
     line-height: 24px;
 }
 
-a { color: #000088; }
-a:hover { color: #880000; }
+/* Links */
+a {
+    color: #000088;
+    text-decoration: none;
+}
 
-#wrap { 
+a:hover {
+    color: #880000;
+}
+
+/* Wrapper */
+#wrap {
     margin: 40px auto;
     width: 940px;
     background: #fff;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding: 20px;
 }
 
-/* Header Styling */
+/* Header */
 #header {
     background: #f9f9f9;
-    padding: 20px 0;
+    padding: 20px 0 30px;
     text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px 10px 0 0;
 }
 
 #header h1 {
@@ -34,16 +41,17 @@ a:hover { color: #880000; }
     font-weight: bold;
     color: #3f3f3f;
     font-size: 38px;
-    letter-spacing: -1px;
 }
 
 #header h2 {
     display: inline-block;
+    margin-top: 10px;
+    padding: 5px 12px;
+    font-weight: normal;
+    color: #171717;
+    font-size: 22px;
     background: #FFEE9F;
     border: 1px solid #FFE25F;
-    padding: 8px 15px;
-    font-size: 22px;
-    color: #171717;
     border-radius: 10px;
 }
 
@@ -51,43 +59,59 @@ a:hover { color: #880000; }
 #topmenu {
     background: #f1f1f1;
     padding: 10px 20px;
-    text-align: center;
     border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
 }
 
 #topmenu ul {
-    list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 #topmenu li {
-    display: inline;
+    display: inline-block;
     padding: 0 15px;
 }
 
 #topmenu li a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
+    color: #3f3f3f;
     font-weight: bold;
-    color: #333;
+    padding: 10px;
 }
 
 #topmenu li a:hover {
     color: #880000;
 }
 
-/* Search Bar */
+/* Search Box */
 .search {
     float: right;
+    margin-top: -40px;
 }
 
-/* Validation Section Layout */
+/* Page Content */
+#content {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#content h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Two Column Layout for Validation Page */
 .validation-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 20px;
+    padding: 20px;
 }
 
 /* Columns */
@@ -95,30 +119,33 @@ a:hover { color: #880000; }
     width: 48%;
 }
 
+/* Vertical Line Separator */
 .line {
     width: 2px;
     background-color: #000;
     height: 100%;
+    margin: 0 10px;
 }
 
 /* Validation Images */
 .validation-container img {
     width: 100%;
+    max-width: 400px;
     border: 2px solid #ddd;
     border-radius: 5px;
     padding: 5px;
     background: #fff;
+    display: block;
+    margin-bottom: 15px;
 }
 
 /* Footer */
 #footer {
     background: #3f3f3f;
     color: #fff;
-    text-align: center;
     padding: 20px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    margin-top: 30px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
 }
 
 #footer a {
@@ -129,4 +156,44 @@ a:hover { color: #880000; }
 
 #footer a:hover {
     border-bottom: 1px dotted #ccc;
+}
+
+.right {
+    float: right;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    #wrap {
+        width: 95%;
+    }
+
+    #topmenu ul {
+        text-align: center;
+    }
+
+    #topmenu li {
+        display: block;
+        padding: 5px 0;
+    }
+
+    .search {
+        float: none;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .validation-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .html-column, .css-column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .line {
+        display: none;
+    }
 }
