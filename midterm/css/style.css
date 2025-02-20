@@ -1,4 +1,3 @@
-/* General Reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,7 +8,7 @@ body {
     line-height: 24px;
 }
 
-/* Links */
+
 a {
     color: #000088;
     text-decoration: none;
@@ -19,7 +18,7 @@ a:hover {
     color: #880000;
 }
 
-/* Wrapper */
+
 #wrap {
     margin: 40px auto;
     width: 940px;
@@ -28,7 +27,7 @@ a:hover {
     border-radius: 10px;
 }
 
-/* Header */
+
 #header {
     background: #f9f9f9;
     padding: 20px 0 30px;
@@ -55,7 +54,7 @@ a:hover {
     border-radius: 10px;
 }
 
-/* Navigation Menu */
+
 #topmenu {
     background: #f1f1f1;
     padding: 10px 20px;
@@ -87,13 +86,13 @@ a:hover {
     color: #880000;
 }
 
-/* Search Box */
+
 .search {
     float: right;
     margin-top: -40px;
 }
 
-/* Page Content */
+
 #content {
     width: 90%;
     margin: 20px auto;
@@ -105,7 +104,7 @@ a:hover {
     color: #333;
 }
 
-/* Two Column Layout for Validation Page */
+
 .validation-container {
     display: flex;
     justify-content: space-between;
@@ -114,12 +113,12 @@ a:hover {
     padding: 20px;
 }
 
-/* Columns */
+
 .html-column, .css-column {
     width: 48%;
 }
 
-/* Vertical Line Separator */
+
 .line {
     width: 2px;
     background-color: #000;
@@ -127,22 +126,22 @@ a:hover {
     margin: 0 10px;
 }
 
-/* Validation Images */
+
 .validation-container img {
     width: 100%;
     max-width: 400px;
     border: 2px solid #ddd;
     border-radius: 5px;
     padding: 5px;
-    background: #fff;
+    background: #rrr;
     display: block;
     margin-bottom: 15px;
 }
 
-/* Footer */
+
 #footer {
     background: #3f3f3f;
-    color: #fff;
+    color: #rrr;
     padding: 20px;
     text-align: center;
     border-radius: 0 0 10px 10px;
@@ -151,49 +150,14 @@ a:hover {
 #footer a {
     color: #fff;
     text-decoration: none;
-    border-bottom: 1px dotted #fff;
+    border-bottom: 1px  #rrr;
 }
 
 #footer a:hover {
-    border-bottom: 1px dotted #ccc;
+    border-bottom: 1px #ccc;
 }
 
 .right {
     float: right;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    #wrap {
-        width: 95%;
-    }
-
-    #topmenu ul {
-        text-align: center;
-    }
-
-    #topmenu li {
-        display: block;
-        padding: 5px 0;
-    }
-
-    .search {
-        float: none;
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    .validation-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .html-column, .css-column {
-        width: 100%;
-        text-align: center;
-    }
-
-    .line {
-        display: none;
-    }
-}
