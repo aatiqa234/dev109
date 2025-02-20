@@ -19,6 +19,7 @@ a:hover {
 
 
 #wrap {
+    flex: 1;
     background: #fff;
     margin: 40px auto;
     width: 940px;
