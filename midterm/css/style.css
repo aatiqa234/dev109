@@ -6,6 +6,10 @@ body {
     color: #3f3f3f;
     font-size: 16px;
     line-height: 24px;
+     background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
 }
 
 
