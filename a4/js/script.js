@@ -1,7 +1,17 @@
 function isValid() {
-    if (firstName() //&&
-       // lastName()
-    )
+    if (firstName()&&
+        lastName()&&
+        email()&&
+        phone()&&
+        username()&&
+        password()&&
+        addres()&&
+        city()&&
+        state()&&
+        country()&&
+        zipcode()&&
+        comments()&&
+   )
     return true;
     else
         document.getElementById("submiterror").innerHTML = "<p><strong>Error Submitting — See Above</strong></p>";
