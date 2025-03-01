@@ -1,63 +1,69 @@
 function isValid() {
-    if (firstName()&&
-        lastName()&&
-        email()&&
-        phone()&&
-        username()&&
-        password()&&
-        addres()&&
-        city()&&
-        state()&&
-        country()&&
-        zipcode()&&
-        comments()&&
-   )
-    return true;
-    else
+    if (firstName() &&
+        lastName() &&
+        email() &&
+        phone() &&
+        username() &&
+        password() &&
+        address() &&
+        city() &&
+        state() &&
+        country() &&
+        zipcode() &&
+        comments()) {
+        return true;
+    } else {
         document.getElementById("submiterror").innerHTML = "<p><strong>Error Submitting — See Above</strong></p>";
         event.preventDefault();
         return false;
+    }
 }
 
-function firstName(){
-    //1) Create variable
-    var validFirstname=false;
-    //2) read value from HTML
+function firstName() {
+    var validFirstname = false;
     var firstname = document.getElementById("FirstName").value;
     var errorMessages = "";
-    //3) Do validation
-    if (firstname==="null" || firstname==="" || firstname.length > 20 ) {
+    if (firstname === "null" || firstname === "" || firstname.length > 20) {
         errorMessages += "<p>The first name is required and cannot be greater than 20 characters</p>";
-        console.log("First name invalid — length")
-        } else if (firstname.match("^[a-zA-Z ,.'-]+$")===null) {
-            errorMessages += "<p>Invalid caracter in last name (accepts only A-Z, a-z, and ,.'-)</p>";
-            console.log("First name invalid — bad characters")
-        } else {
-                validFirstname = true;
-                console.log("First name valid")
-        };
-  
-    //4) Send error message to HTML
+    } else if (firstname.match("^[a-zA-Z ,.'-]+$") === null) {
+        errorMessages += "<p>Invalid character in first name (accepts only A-Z, a-z, and ,.'-)</p>";
+    } else {
+        validFirstname = true;
+    }
     document.getElementById("fname").innerHTML = errorMessages;
-    //5) return status of each field
-    return (validFirstname);
+    return validFirstname;
 }
-function lastname(){
-  var ValidLastname=false;
-  var lastname = document.getElementByID("LastName").value;
-  var errorMessages="";
-if (lastname==="null" || lastname==="" || lastname.length >20){
-  errorMessages += "<p> The last name is required and cannot be greater than 20 characters</p>";
-  console.log("Last name invalid-length")
-} else if(lastname.math("^[a-zA-Z,.'0]+$")===null){
-  errorMessages += "<p>Invalid caracter in last name (accepts only A-Z, a-z, and ,.;-)</p>"
-  console.log("Last name invalid-bad characters")
-} else { 
-  validLastname = true;
-  console.log("Last name valid")
+
+function lastName() {
+    var validLastname = false;
+    var lastname = document.getElementById("LastName").value;
+    var errorMessages = "";
+    if (lastname === "null" || lastname === "" || lastname.length > 20) {
+        errorMessages += "<p>The last name is required and cannot be greater than 20 characters</p>";
+    } else if (lastname.match("^[a-zA-Z,.'-]+$") === null) {
+        errorMessages += "<p>Invalid character in last name (accepts only A-Z, a-z, and ,.'-)</p>";
+    } else {
+        validLastname = true;
+    }
+    document.getElementById("lastname").innerHTML = errorMessages;
+    return validLastname;
 }
-  document.getElementByID("lastname").innerHTML = errorMessages; 
-  return (validLastname);
+
+function email() {
+    var validEmail = false;
+    var userEmail = document.getElementById("email").value;
+    var errorMessages = "";
+    var atpos = userEmail.indexOf("@");
+    var dotpos = userEmail.lastIndexOf(".");
+    if (userEmail === "") {
+        errorMessages = "<p>Email is required</p>";
+    } else if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= userEmail.length) {
+        errorMessages = "<p>Invalid email format</p>";
+    } else {
+        validEmail = true;
+    }
+    document.getElementById("emailError").innerHTML = errorMessages;
+    return validEmail;
 }
 function email() {
     var validEmail = false;
@@ -75,7 +81,7 @@ function email() {
         validEmail = true;
     }
 
-    /
+    
     document.getElementById("emailError").innerHTML = errorMessages;
 
     return validEmail;
@@ -107,7 +113,7 @@ function phone() {
         phoneInput.value = phoneNumber;
     }
 
-    // Send error message to HTML
+    
     document.getElementById("phoneError").innerHTML = errorMessages;
     return validPhone;
 }
@@ -151,6 +157,7 @@ function password() {
 
     
     document.getElementById("passwordError").innerHTML = errorMessages;
+    return validPassword;
 }
   
 function address() {
