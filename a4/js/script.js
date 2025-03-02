@@ -52,7 +52,7 @@ function lastName() {
 
 function email() {
     var validEmail = false;
-    var userEmail = document.getElementById("email").value;
+    var userEmail = document.getElementById("Email").value;
     var errorMessages = "";
 
     var atpos = userEmail.indexOf("@");
@@ -73,7 +73,7 @@ function email() {
 }
 function phone() {
     var validPhone = false;
-    var phoneInput = document.getElementById("phone");
+    var phoneInput = document.getElementById("Phone");
     var phoneNumber = phoneInput.value.replace(/\D/g, ""); 
     var errorMessages = "";
 
@@ -104,7 +104,7 @@ function phone() {
 }
 function username() {
     var validUsername = false;
-    var userInput = document.getElementById("username").value.trim(); 
+    var userInput = document.getElementById("Username").value.trim(); 
     var errorMessages = "";
 
     
@@ -123,7 +123,7 @@ function username() {
 }
 function password() {
     var validPassword = false;
-    var userPassword = document.getElementById("password").value.trim(); 
+    var userPassword = document.getElementById("Password").value.trim(); 
     var errorMessages = "";
 
     
@@ -147,7 +147,7 @@ function password() {
   
 function address() {
     var validAddress = false;
-    var userAddress = document.getElementById("address").value.trim(); 
+    var userAddress = document.getElementById("Address").value.trim(); 
     var errorMessages = "";
 
     
@@ -164,7 +164,7 @@ function address() {
 }
 function city() {
     var validCity = false;
-    var userCity = document.getElementById("city").value.trim(); 
+    var userCity = document.getElementById("City").value.trim(); 
     var errorMessages = "";
 
    
@@ -181,7 +181,7 @@ function city() {
 }
 function state() {
     var validState = false;
-    var userState = document.getElementById("state").value;
+    var userState = document.getElementById("State").value;
     var errorMessages = "";
 
     
@@ -199,7 +199,7 @@ function state() {
 
 function country() {
     var validCountry = false;
-    var userCountry = document.getElementById("country").value;
+    var userCountry = document.getElementById("Country").value;
     var errorMessages = "";
 
     
@@ -217,8 +217,8 @@ function country() {
 
 function zipcode() {
     var validZipcode = false;
-    var userCountry = document.getElementById("country").value;
-    var userZip = document.getElementById("zipcode").value;
+    var userCountry = document.getElementById("Country").value;
+    var userZip = document.getElementById("Zipcode").value;
     var errorMessages = "";
 
     
@@ -243,7 +243,7 @@ function zipcode() {
 
 function comments() {
     var validComments = true; 
-    var userComments = document.getElementById("comments").value;
+    var userComments = document.getElementById("Comments").value;
     var errorMessages = "";
 
     
