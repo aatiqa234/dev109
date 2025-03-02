@@ -49,22 +49,7 @@ function lastName() {
     return validLastname;
 }
 
-function email() {
-    var validEmail = false;
-    var userEmail = document.getElementById("email").value;
-    var errorMessages = "";
-    var atpos = userEmail.indexOf("@");
-    var dotpos = userEmail.lastIndexOf(".");
-    if (userEmail === "") {
-        errorMessages = "<p>Email is required</p>";
-    } else if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= userEmail.length) {
-        errorMessages = "<p>Invalid email format</p>";
-    } else {
-        validEmail = true;
-    }
-    document.getElementById("emailError").innerHTML = errorMessages;
-    return validEmail;
-}
+
 function email() {
     var validEmail = false;
     var userEmail = document.getElementById("email").value;
