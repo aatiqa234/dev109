@@ -30,7 +30,7 @@ function firstName() {
     } else {
         validFirstname = true;
     }
-    document.getElementById("fname").innerHTML = errorMessages;
+    document.getElementById("fnameError").innerHTML = errorMessages;
     return validFirstname;
 }
 
@@ -45,7 +45,7 @@ function lastName() {
     } else {
         validLastname = true;
     }
-    document.getElementById("lastname").innerHTML = errorMessages;
+    document.getElementById("lastnameError").innerHTML = errorMessages;
     return validLastname;
 }
 
