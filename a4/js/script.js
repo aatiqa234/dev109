@@ -1,5 +1,4 @@
-function isValid(event) {
-  event.preventDefault();
+function isValid() {
     if (firstName() &&
         lastName() &&
         email() &&
@@ -15,7 +14,7 @@ function isValid(event) {
         return true;
     } else {
         document.getElementById("submitError").innerHTML = "<p><strong>Error Submitting — See Above</strong></p>";
-        
+        event.preventDefault();
         return false;
     }
 }
