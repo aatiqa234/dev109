@@ -210,7 +210,7 @@ function zipcode() {
     valid = true;
   }
 
-  document.getElementById("zipError").innerHTML = errorMessages;
+  document.getElementById("zipcodeError").innerHTML = errorMessages;
   return valid;
 }
 
