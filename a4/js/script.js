@@ -182,15 +182,19 @@ function city() {
 function state() {
     var validState = false;
     var userState = document.getElementById("State").value;
+    var userCountry=document.getElementById("Country").value;
     var errorMessages = "";
 
     
-    if (userState === "") {
-        errorMessages = "<p>State is required</p>";
+    if (userCountry === "USA") {
+        if (userState === ""){
+        errorMessages = "<p>State is required when the country is USA</p>";
     } else {
         validState = true;
     }
-
+    } else{
+        validState=true; // No Validation is required if the country is not USA 
+    }
     
     document.getElementById("stateError").innerHTML = errorMessages;
 
