@@ -222,7 +222,7 @@ function country() {
 function zipcode() {
     var validZipcode = false;
     var userCountry = document.getElementById("Country").value;
-    var userZip = document.getElementById("Zipcode").value;
+    var userZip = document.getElementById("zipcode").value;
     var errorMessages = "";
 
     
@@ -247,7 +247,7 @@ function zipcode() {
 
 function comments() {
     var validComments = true; 
-    var userComments = document.getElementById("Comments").value;
+    var userComments = document.getElementById("comments").value;
     var errorMessages = "";
 
     
