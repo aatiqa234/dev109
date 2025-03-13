@@ -1,43 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>A5 - Carousel</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!--The Title for the an image-->
-  <div class="title">Famous Landmarks</div>
-  <!--This is for displaying the image-->
-  <div class="slideshow-container">
-    <img id="slideshow" src="https://static.vecteezy.com/system/resources/thumbnails/045/132/933/small_2x/a-beautiful-picture-of-the-eiffel-tower-in-paris-the-capital-of-france-with-a-wonderful-background-in-wonderful-natural-colors-photo.jpg" alt="Eiffel Tower in Paris " class="carousel-image active" id="image1">
-    <div id="description">Eiffel Tower in Paris</div>
-  </div>
-  <div>
-    <img id="slideshow" src="https://www.neh.gov/sites/default/files/2018-06/great_wall_of_china-mutianyu_4.jpg" alt="The Great Wall of China " class="carousel-image active" id="image2">
-    <div id="description">The Great Wall of China</div>
-  </div>
-  <div>
-    <img id="slideshow" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUbXISxNo1c7wKCm8JdPnKmjBlxjRDafG7AQ&s" alt="The Colesium in Rome" alt="The Colesium in Rome" class="carousel-image active" id="image3">
-    <div id="description">The Colosseum in Paris</div>
-  </div>
-  <div>
-    <img id="slideshow" src="https://www.peru.travel/Contenido/Noticia/Imagen/en/2052/1.0/Principal/circuits_mapi_Desktop.jpg" alt="Mechu Picchu in Peru" clas="carousel-image" id="image4">
-    <div id="description">Machu Picchu in Peru</div>
-  </div>
-  <div>
-    <img id="slideshow" src="https://hips.hearstapps.com/hmg-prod/images/dramatic-storm-cloud-above-pyramids-giza-egypt-royalty-free-image-1662470381.jpg?crop=1xw:0.98468xh;center,top&resize=1200:*" alt="Pyramids of Giza in Egypt " class="carousel-image active" id="image5">
-    <div id="description">Pyramids of Giza in Egypt</div>
-  </div>
-         
-   <!--It will display the timer-->
-  <div id="carousel-container">
-   <div class="timer" id="timer">4s</div>
-  <!--The buttons for the slideshow-->
-  <button id="prev">Previous</button><!--This is for the previous page-->
-  <button id="next">Next</button><!-- This is for the next page-->
-  
-  <script src="js/script.js"></script>
+
+    <div class="container">
+        <!-- Title -->
+        <h1 class="title">Famous Landmarks</h1>
+
+        <!-- Slideshow Container -->
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/045/132/933/small_2x/a-beautiful-picture-of-the-eiffel-tower-in-paris-the-capital-of-france-with-a-wonderful-background-in-wonderful-natural-colors-photo.jpg" alt="Eiffel Tower">
+                <p class="description">Eiffel Tower in Paris</p>
+            </div>
+            <div class="slide">
+                <img src="https://www.neh.gov/sites/default/files/2018-06/great_wall_of_china-mutianyu_4.jpg" alt="The Great Wall of China">
+                <p class="description">The Great Wall of China</p>
+            </div>
+            <div class="slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUbXISxNo1c7wKCm8JdPnKmjBlxjRDafG7AQ&s" alt="The Colosseum">
+                <p class="description">The Colosseum in Rome</p>
+            </div>
+            <div class="slide">
+                <img src="https://www.peru.travel/Contenido/Noticia/Imagen/en/2052/1.0/Principal/circuits_mapi_Desktop.jpg" alt="Machu Picchu">
+                <p class="description">Machu Picchu in Peru</p>
+            </div>
+            <div class="slide">
+                <img src="https://hips.hearstapps.com/hmg-prod/images/dramatic-storm-cloud-above-pyramids-giza-egypt-royalty-free-image-1662470381.jpg?crop=1xw:0.98468xh;center,top&resize=1200:*" alt="Pyramids of Giza">
+                <p class="description">Pyramids of Giza in Egypt</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with the Buttons -->
+    <footer class="footer">
+        <button id="prev">Previous</button>
+        <div class="timer" id="timer">4s</div>
+        <button id="next">Next</button>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
