@@ -1,37 +1,44 @@
-// This function is to move next image 
-    function nextImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
-    }
+const slides = document.querySelectorAll(".slide"); // Select all slides
+const prevButton = document.getElementById("prev"); // Previous button
+const nextButton = document.getElementById("next"); // Next button
+const timerDisplay = document.getElementById("timer"); // Timer display
 
-    // This function is to move to previous image 
-    function prevImage() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      showImage(currentIndex);
-    }
+let currentSlide = 0;
+let intervalTime = 4000; // 4 seconds per slide
+let slideInterval;
 
-    // This is the timer to change every seconds 
-    function startTimer() {
-      timer = setInterval(() => {
-        nextImage();
-      }, 4000); // Change image every 4 seconds
-    }
-
-    // It's stopping the timer 
-    function resetTimer() {
-      clearInterval(timer);
-      startTimer();
-    }
-
-    // This is for clicking the previour or next button
-    prevButton.addEventListener('click', () => {
-      prevImage();
-      resetTimer();
+// Function to show a specific slide
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) slide.classList.add("active");
     });
+}
 
-    nextButton.addEventListener('click', () => {
-      nextImage();
-      resetTimer();
-    });
+// Function to show the next slide
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+    resetTimer();
+}
 
-    
+// Function to show the previous slide
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+    resetTimer();
+}
+
+// Function to update and restart the timer
+function resetTimer() {
+    clearInterval(slideInterval);
+    timerDisplay.innerText = "4s";
+    slideInterval = setInterval(nextSlide, intervalTime);
+}
+
+// Event Listeners for buttons
+prevButton.addEventListener("click", prevSlide);
+nextButton.addEventListener("click", nextSlide);
+
+// Auto-switch slides every 4 seconds
+slideInterval = setInterval(nextSlide, intervalTime);
