@@ -108,7 +108,7 @@ document.getElementById("prev").addEventListener("click", prevImage);
 
 
 // This is for checkbox changes
-autoNextCheckbox.addEventListener("change", function (event)  {
+autoNextCheckbox.addEventListener("change", function (event))  {
   // This is for auto-ncheck box
     isAutoNextEnabled = event.target.checked;
     toggleAutoNext();
