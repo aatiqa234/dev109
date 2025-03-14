@@ -9,11 +9,11 @@ var images = [
 
 // List of descriptions for each image
 var descriptions = [
-    "Eiffel Tower in Paris",
-    "The Great Wall of China",
-    "The Colosseum in Rome",
-    "Machu Picchu in Peru",
-    "Pyramids of Giza in Egypt"
+    "The Eiffel Tower was built in 1889 for a world's fair in Paris. At first, people didn’t like it, but now it is one of the most famous buildings in the world to explore",
+    "The Great Wall of China was built over many years ago to protect china. It is more than 13,000 miles long",
+    "The Colosseum in Rome is a big, old stadium where people watched fights. It was built almost 2,000 years ago",
+    "Machu Picchu is an old city built by the Inca people in Peru. It was hidden for many years before people found it again",
+    "The Pyramids in Egypt were built a long time ago. They were made as big tombs as for the important people",
 ];
 
 // Get elements from the HTML
