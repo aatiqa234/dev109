@@ -1,5 +1,5 @@
 // List of image URLs
-const images = [
+var images = [
     "https://static.vecteezy.com/system/resources/thumbnails/045/132/933/small_2x/a-beautiful-picture-of-the-eiffel-tower-in-paris-the-capital-of-france-with-a-wonderful-background-in-wonderful-natural-colors-photo.jpg",
     "https://www.neh.gov/sites/default/files/2018-06/great_wall_of_china-mutianyu_4.jpg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUbXISxNo1c7wKCm8JdPnKmjBlxjRDafG7AQ&s",
@@ -8,7 +8,7 @@ const images = [
 ];
 
 // List of descriptions for each image
-const descriptions = [
+var descriptions = [
     "Eiffel Tower in Paris",
     "The Great Wall of China",
     "The Colosseum in Rome",
@@ -18,32 +18,32 @@ const descriptions = [
 
 // Get elements from the HTML
 // This keeps track of which image is showing
-let currentIndex = 0; 
+var currentIndex = 0; 
 // The area where images appear
-const slideshowContainer = document.querySelector(".slideshow-container"); 
+var slideshowContainer = document.querySelector(".slideshow-container"); 
 // Display the timer 
-const timerElement = document.getElementById("timer"); 
+var timerElement = document.getElementById("timer"); 
 // The autoNextCheckbox featuring the auto-next
-const autoNextCheckbox = document.getElementById("auto-next"); 
+var autoNextCheckbox = document.getElementById("auto-next"); 
 //  This will be auto-switiching by defaul
-let isAutoNextEnabled = true; 
+var isAutoNextEnabled = true; 
 
 // It create slides and add them to the page 
-images.forEach((src, index) => {
+images.forEach(function(src, index)  {
   // Create a <div> for each slide
-    const slideDiv = document.createElement("div"); 
+    var slideDiv = document.createElement("div"); 
   // Give it the class 'slide'
     slideDiv.classList.add("slide"); 
   // Show the first image visible 
     if (index === 0) slideDiv.classList.add("active"); 
 // Create an image element
-    const img = document.createElement("img"); 
+    var img = document.createElement("img"); 
   // Set the image source
     img.src = src; 
   // Set the image description
     img.alt = descriptions[index]; 
 // Create a paragraph for description to describe an image 
-    const desc = document.createElement("p"); 
+    var desc = document.createElement("p"); 
     desc.classList.add("description");
   // This is for add the description text
     desc.textContent = descriptions[index]; 
@@ -57,16 +57,18 @@ images.forEach((src, index) => {
 
 
 // Create all the slide elements after add them to the page 
-const slides = document.querySelectorAll(".slide");
+var slides = document.querySelectorAll(".slide");
 // This is checking the auto-switching images 
-let slideInterval; 
+var slideInterval; 
 // This is for set the time for 4 seconds until to go next image 
-const intervalTime = 4000; 
+var intervalTime = 4000; 
 
 // Function for showing an image 
 function updateSlide() {
-  // This is for hiding all slides 
-    slides.forEach(slide => slide.classList.remove("active")); 
+   slides.forEach(function (slide) {
+     // This is for hiding the images
+        slide.classList.remove("active");
+    });
   // This is for showing only current slide 
     slides[currentIndex].classList.add("active"); 
 }
@@ -109,11 +111,11 @@ document.getElementById("next").addEventListener("click", nextImage);
 document.getElementById("prev").addEventListener("click", prevImage);
 
 // This is for image to move forward or backward 
-slideshowContainer.addEventListener("click", (event) => {
+slideshowContainer.addEventListener("click", function (event)  {
   // The width of the slideshow area 
-    const containerWidth = slideshowContainer.offsetWidth; 
+    var containerWidth = slideshowContainer.offsetWidth; 
   // This is for clicking the position 
-    const clickX = event.offsetX; 
+    var clickX = event.offsetX; 
 
     if (clickX < containerWidth / 2) {
       // When click on the left half go backward 
@@ -125,12 +127,12 @@ slideshowContainer.addEventListener("click", (event) => {
 });
 
 // This is for checkbox changes
-autoNextCheckbox.addEventListener("change", (event) => {
+autoNextCheckbox.addEventListener("change", function (event)  {
   // This is for auto-next
     isAutoNextEnabled = event.target.checked;
   // This is for restarting the timer
     resetTimer(); 
-
+});
 // This is when page load start autoshowing 
 slideInterval = setInterval(nextImage, intervalTime);
   // Should be load first image 
