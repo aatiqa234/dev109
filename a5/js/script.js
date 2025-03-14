@@ -22,8 +22,8 @@ var currentIndex = 0;
 // The area where images appear
 var slideshowContainer = document.querySelector(".slideshow-container");  
 // The autoNextCheckbox and the toggle-auto-run featuring the auto-next
-var autoNextCheckbox = document.getElementById("auto-next"); 
-var toggleAutoRunButton = document.getElementById("toggle-auto-run");
+var autoNextCheckbox = document.getElementById("autoRunCheckbox"); 
+var toggleAutoRunButton = document.getElementById("toggleAutoRun");
 var isAutoNextEnabled = false; 
 var slideInterval;
 var intervalTime = 4000;
