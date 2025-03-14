@@ -21,7 +21,7 @@ var descriptions = [
 var currentIndex = 0; 
 // The area where images appear
 var slideshowContainer = document.querySelector(".slideshow-container");  
-// The autoNextCheckbox featuring the auto-next
+// The autoNextCheckbox and the toggle-auto-run featuring the auto-next
 var autoNextCheckbox = document.getElementById("auto-next"); 
 var toggleAutoRunButton = document.getElementById("toggle-auto-run");
 var isAutoNextEnabled = false; 
@@ -108,7 +108,7 @@ document.getElementById("prev").addEventListener("click", prevImage);
 
 
 // This is for checkbox changes
-autoNextCheckbox.addEventListener("change", function (event))  {
+autoNextCheckbox.addEventListener("change", function (event)  {
   // This is for auto-ncheck box
     isAutoNextEnabled = event.target.checked;
     toggleAutoNext();
