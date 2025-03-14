@@ -86,7 +86,7 @@ function prevImage() {
   
 }
 
-// Function for auto-switching timer
+// This function is for when the slide is start or stop the auto slide
 function toggleAutoNext() {
   clearInterval(slideInterval);
   // When the auto-text is on
@@ -108,10 +108,16 @@ document.getElementById("prev").addEventListener("click", prevImage);
 
 // This is for checkbox changes
 autoNextCheckbox.addEventListener("change", function (event)  {
-  // This is for auto-next
+  // This is for auto-ncheck box
     isAutoNextEnabled = event.target.checked;
     toggleAutoNext();
 });
+// This is for the button click of toggel-run
+toggleAutoRunButton.addEventListener("click", function () {
+        autoNextCheckbox.checked = !autoNextCheckbox.checked;
+        isAutoNextEnabled = autoNextCheckbox.checked;
+        toggleAutoNext();
+});
 
-// Should be load first image 
+// Update Slide
 updateSlide(); 
