@@ -23,6 +23,7 @@ var currentIndex = 0;
 var slideshowContainer = document.querySelector(".slideshow-container");  
 // The autoNextCheckbox featuring the auto-next
 var autoNextCheckbox = document.getElementById("auto-next"); 
+var toggleAutoRunButton = document.getElementById("toggle-auto-run");
 var isAutoNextEnabled = false; 
 var slideInterval;
 var intervalTime = 4000;
