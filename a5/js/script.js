@@ -20,13 +20,13 @@ var descriptions = [
 // This keeps track of which image is showing
 var currentIndex = 0; 
 // The area where images appear
-var slideshowContainer = document.querySelector(".slideshow-container"); 
-// Display the timer 
-var timerElement = document.getElementById("timer"); 
+var slideshowContainer = document.querySelector(".slideshow-container");  
 // The autoNextCheckbox featuring the auto-next
 var autoNextCheckbox = document.getElementById("auto-next"); 
-//  This will be auto-switiching by defaul
-var isAutoNextEnabled = true; 
+var isAutoNextEnabled = false; 
+var slideInterval;
+var intervalTime = 4000;
+
 
 // It create slides and add them to the page 
 images.forEach(function(src, index)  {
@@ -58,10 +58,6 @@ images.forEach(function(src, index)  {
 
 // Create all the slide elements after add them to the page 
 var slides = document.querySelectorAll(".slide");
-// This is checking the auto-switching images 
-var slideInterval; 
-// This is for set the time for 4 seconds until to go next image 
-var intervalTime = 4000; 
 
 // Function for showing an image 
 function updateSlide() {
@@ -79,8 +75,6 @@ function nextImage() {
     currentIndex = (currentIndex + 1) % slides.length;
   // This is for updating the display image 
     updateSlide(); 
-  // This is for restart the time
-    resetTimer(); 
 }
 
 // Function for previous image
@@ -89,51 +83,35 @@ function prevImage() {
     currentIndex = (currentIndex - 1 + slides.length) % slides.length;  
   // This is for updating the display image 
     updateSlide(); 
-  // This is for restart the time
-    resetTimer(); 
+  
 }
 
 // Function for auto-switching timer
-function resetTimer() {
-  // This is for stoping the current timer
-    clearInterval(slideInterval); 
+function toggleAutoNext() {
+  clearInterval(slideInterval);
   // When the auto-text is on
     if (isAutoNextEnabled) { 
-      // Displaying the restart timer
-        timerElement.innerText = "4s"; 
       // Start auto-switching again
         slideInterval = setInterval(nextImage, intervalTime); 
+    
+   } else {
+        clearInterval(slideInterval);
     }
 }
+
 
 // Add "Next" and "Previous" buttons
 document.getElementById("next").addEventListener("click", nextImage);
 document.getElementById("prev").addEventListener("click", prevImage);
 
-// This is for image to move forward or backward 
-slideshowContainer.addEventListener("click", function (event)  {
-  // The width of the slideshow area 
-    var containerWidth = slideshowContainer.offsetWidth; 
-  // This is for clicking the position 
-    var clickX = event.offsetX; 
 
-    if (clickX < containerWidth / 2) {
-      // When click on the left half go backward 
-        prevImage(); 
-    } else {
-      // When click on the right half go forward 
-        nextImage(); 
-    }
-});
 
 // This is for checkbox changes
 autoNextCheckbox.addEventListener("change", function (event)  {
   // This is for auto-next
     isAutoNextEnabled = event.target.checked;
-  // This is for restarting the timer
-    resetTimer(); 
+    toggleAutoNext();
 });
-// This is when page load start autoshowing 
-slideInterval = setInterval(nextImage, intervalTime);
-  // Should be load first image 
+
+// Should be load first image 
 updateSlide(); 
