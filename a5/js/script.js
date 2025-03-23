@@ -27,6 +27,41 @@ var toggleAutoRunButton = document.getElementById("toggleAutoRun");
 var isAutoNextEnabled = false; 
 var slideInterval;
 var intervalTime = 4000;
+var countdown = 4;
+var countdownInterval;
+
+// Creating countdown display 
+var countdownDisplay = document.createElement("div");
+countdownDisplay.id = "countdown-timer";
+countdownDisplay.style.fontSize = "18px"; 
+countdownDisplay.style.fontWeight = "bold";
+countdownDisplay.style.marginTop = "10px"; 
+document.body.appendChild(countdownDisplay);
+
+// This function is for updating countdown 
+function updateCountdown() {
+    countdownDisplay.textContent = 'Next image'; 
+} 
+
+// This function is for reset to countdown 
+function resetCountdown
+    clearInterval(countdownInterval); 
+    countdown = 4;
+    updateCountdown();
+    startCountdown();
+}
+
+// This function is for starting the countdown 
+function startCountdown (){
+    countdownInterval = setInterval(() => { 
+        countdown--; 
+        updateCountdown(); 
+        if (countdown === 0){
+            nextImage();
+        }
+    },1000);
+}
+                                    
 
 
 // It create slides and add them to the page 
