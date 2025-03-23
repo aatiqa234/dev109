@@ -44,7 +44,7 @@ function updateCountdown() {
 } 
 
 // This function is for reset to countdown 
-function resetCountdown
+function resetCountdown {
     clearInterval(countdownInterval); 
     countdown = 4;
     updateCountdown();
