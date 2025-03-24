@@ -41,7 +41,12 @@
     margin-top: 10px;
     font-weight: bold;
 }
-
+#countdown-timer{
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    margin-top: 10px;
+}
 .buttons {
     display: flex;
     gap: 20px; 
