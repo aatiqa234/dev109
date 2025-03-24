@@ -149,7 +149,7 @@ document.getElementById("prev").addEventListener("click", function() {
 function resetTimer() {
     clearInterval(timerInterval);
     elapsedTime = 0; // Reset elapsed time
-    timerDisplay.textContent = `Elapsed Time: 0 seconds`;
+     timerDisplay.textContent = "Elapsed Time: 0 seconds";
     startTimer();
 }
 
@@ -157,7 +157,7 @@ function resetTimer() {
 function startTimer() {
     timerInterval = setInterval(function() {
         elapsedTime++;
-        timerDisplay.textContent = `Elapsed Time: ${elapsedTime} seconds`;
+        timerDisplay.textContent = "Elapsed Time: " + elapsedTime + " seconds";
     }, 1000);
 }
 
