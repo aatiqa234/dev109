@@ -30,6 +30,10 @@ var intervalTime = 4000;
 var countdown = 4;
 var countdownInterval;
 var countdownDisplay = document.getElementById("countdownDisplay");
+var timerDisplay = document.getElementById("timerDisplay");
+var elapsedTime = 0;
+var timerInterval;
+
 
 // This function is for updating countdown 
 function updateCountdown() {
@@ -106,6 +110,7 @@ function nextImage() {
     currentIndex = (currentIndex + 1) % slides.length;
   // This is for updating the display image 
     updateSlide(); 
+    resetSlide();
 }
 
 // Function for previous image
@@ -114,7 +119,7 @@ function prevImage() {
     currentIndex = (currentIndex - 1 + slides.length) % slides.length;  
   // This is for updating the display image 
     updateSlide(); 
-  
+    resetSlide();
 }
 
 // This function is for when the slide is start or stop the auto slide
@@ -132,8 +137,29 @@ function toggleAutoNext() {
                                     
 
 // Add "Next" and "Previous" buttons
-document.getElementById("next").addEventListener("click", nextImage);
-document.getElementById("prev").addEventListener("click", prevImage);
+document.getElementById("next").addEventListener("click", function()) {
+    resetTimer();
+    nextImage();
+});
+document.getElementById("prev").addEventListener("click", function() { 
+    resetTimer();
+    nextImage();
+});
+
+function resetTimer() {
+    clearInterval(timerInterval);
+    elapsedTime = 0; // Reset elapsed time
+    timerDisplay.textContent = `Elapsed Time: 0 seconds`;
+    startTimer();
+}
+
+// Function to start the timer
+function startTimer() {
+    timerInterval = setInterval(function() {
+        elapsedTime++;
+        timerDisplay.textContent = `Elapsed Time: ${elapsedTime} seconds`;
+    }, 1000);
+}
 
 
 
@@ -152,3 +178,15 @@ toggleAutoRunButton.addEventListener("click", function () {
 
 // Update Slide
 updateSlide(); 
+resetCountdown();  
+resetTimer(); 
+
+
+if (isAutoNextEnabled) {
+    setInterval(function() {
+        if (isAutoNextEnabled) {
+            nextImage();
+            resetTimer(); 
+        }
+    }, 3000); 
+}
