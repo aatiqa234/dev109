@@ -130,7 +130,7 @@ function toggleAutoNext() {
   // When the auto-text is on
     if (isAutoNextEnabled) { 
       // Start auto-switching again
-        slideInterval = setInterval(function() {; 
+        slideInterval = setInterval(function() { 
         nextImage();
         resetCountdown();                                   
      }, intervalTime);
