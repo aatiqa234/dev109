@@ -137,7 +137,7 @@ function toggleAutoNext() {
                                     
 
 // Add "Next" and "Previous" buttons
-document.getElementById("next").addEventListener("click", function()) {
+document.getElementById("next").addEventListener("click", function() {
     resetTimer();
     nextImage();
 });
