@@ -34,7 +34,7 @@ var countdownInterval;
 
 // This function is for updating countdown 
 function updateCountdown() {
-    countdownDisplay.textContent = 'Next image in ${countdown} seconds'; 
+    countdownDisplay.textContent = `Next image in ${countdown} seconds`; 
 } 
 
 // This function is for reset to countdown 
