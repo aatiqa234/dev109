@@ -27,40 +27,9 @@ var toggleAutoRunButton = document.getElementById("toggleAutoRun");
 var isAutoNextEnabled = false; 
 var slideInterval;
 var intervalTime = 4000;
-var countdown = 4;
-var countdownInterval;
-var countdownDisplay = document.getElementById("countdownDisplay");
 var timerDisplay = document.getElementById("timerDisplay");
 var elapsedTime = 0;
 var timerInterval;
-
-
-// This function is for updating countdown 
-function updateCountdown() {
-    countdownDisplay.textContent = "Next image in " + countdown + " seconds";
-} 
-
-// This function is for reset to countdown 
-function resetCountdown() {
-    clearInterval(countdownInterval); 
-    countdown = 4;
-    updateCountdown();
-    startCountdown();
-}
-
-// This function is for starting the countdown 
-function startCountdown() {
-    countdownInterval = setInterval(function() { 
-        countdown--; 
-        updateCountdown(); 
-        if (countdown === 0) {
-            clearInterval(countdownInterval);
-            nextImage();
-            resetCountdown();
-        }
-    },1000);
-}
-                                    
 
 
 // It create slides and add them to the page 
@@ -110,7 +79,7 @@ function nextImage() {
     currentIndex = (currentIndex + 1) % slides.length;
   // This is for updating the display image 
     updateSlide(); 
-    resetSlide();
+    resetTimer();
 }
 
 // Function for previous image
@@ -119,9 +88,22 @@ function prevImage() {
     currentIndex = (currentIndex - 1 + slides.length) % slides.length;  
   // This is for updating the display image 
     updateSlide(); 
-    resetSlide();
+    resetTimer();
 }
 
+// Function to start the timer
+function startTimer() {
+    timerInterval = setInterval(function() {
+        elapsedTime++;
+        timerDisplay.textContent = "Elapsed Time: " + elapsedTime + " seconds";
+    }, 1000);
+}
+function resetTimer() {
+    clearInterval(timerInterval);
+    elapsedTime = 0; // Reset elapsed time
+    timerDisplay.textContent = "Elapsed Time: 0 seconds";
+    startTimer();
+}
 // This function is for when the slide is start or stop the auto slide
 function toggleAutoNext() {
   clearInterval(slideInterval);
@@ -130,7 +112,7 @@ function toggleAutoNext() {
       // Start auto-switching again
         slideInterval = setInterval(function() { 
         nextImage();
-        resetCountdown();                                   
+        resetTimer();                                   
      }, intervalTime);
     }
 }
@@ -145,24 +127,6 @@ document.getElementById("prev").addEventListener("click", function() {
     resetTimer();
     nextImage();
 });
-
-function resetTimer() {
-    clearInterval(timerInterval);
-    elapsedTime = 0; // Reset elapsed time
-     timerDisplay.textContent = "Elapsed Time: 0 seconds";
-    startTimer();
-}
-
-// Function to start the timer
-function startTimer() {
-    timerInterval = setInterval(function() {
-        elapsedTime++;
-        timerDisplay.textContent = "Elapsed Time: " + elapsedTime + " seconds";
-    }, 1000);
-}
-
-
-
 // This is for checkbox changes
 autoNextCheckbox.addEventListener("change", function (event) {
   // This is for auto-ncheck box
@@ -178,15 +142,4 @@ toggleAutoRunButton.addEventListener("click", function () {
 
 // Update Slide
 updateSlide(); 
-resetCountdown();  
 resetTimer(); 
-
-
-if (isAutoNextEnabled) {
-    setInterval(function() {
-        if (isAutoNextEnabled) {
-            nextImage();
-            resetTimer(); 
-        }
-    }, 3000); 
-}
