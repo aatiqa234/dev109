@@ -30,13 +30,7 @@ var intervalTime = 4000;
 var countdown = 4;
 var countdownInterval;
 
-// Creating countdown display 
-var countdownDisplay = document.createElement("div");
-countdownDisplay.id = "countdown-timer";
-countdownDisplay.style.fontSize = "18px"; 
-countdownDisplay.style.fontWeight = "bold";
-countdownDisplay.style.marginTop = "10px"; 
-slideshowContainer.appendChild(countdownDisplay);
+
 
 // This function is for updating countdown 
 function updateCountdown() {
