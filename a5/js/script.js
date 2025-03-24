@@ -53,7 +53,7 @@ function resetCountdown() {
 
 // This function is for starting the countdown 
 function startCountdown() {
-    countdownInterval = setInterval(() => { 
+    countdownInterval = setInterval(function() { 
         countdown--; 
         updateCountdown(); 
         if (countdown === 0) {
@@ -130,7 +130,7 @@ function toggleAutoNext() {
   // When the auto-text is on
     if (isAutoNextEnabled) { 
       // Start auto-switching again
-        slideInterval = setInterval(() => {; 
+        slideInterval = setInterval(function() {; 
         nextImage();
         resetCountdown();                                   
      }, intervalTime);
@@ -145,7 +145,7 @@ document.getElementById("prev").addEventListener("click", prevImage);
 
 
 // This is for checkbox changes
-autoNextCheckbox.addEventListener("change", function (event)  {
+autoNextCheckbox.addEventListener("change", function (event) {
   // This is for auto-ncheck box
     isAutoNextEnabled = event.target.checked;
     toggleAutoNext();
