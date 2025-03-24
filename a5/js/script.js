@@ -36,7 +36,7 @@ countdownDisplay.id = "countdown-timer";
 countdownDisplay.style.fontSize = "18px"; 
 countdownDisplay.style.fontWeight = "bold";
 countdownDisplay.style.marginTop = "10px"; 
-document.body.appendChild(countdownDisplay);
+slideshowContainer.appendChild(countdownDisplay);
 
 // This function is for updating countdown 
 function updateCountdown() {
