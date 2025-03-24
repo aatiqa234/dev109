@@ -44,7 +44,7 @@ function updateCountdown() {
 } 
 
 // This function is for reset to countdown 
-function resetCountdown {
+function resetCountdown() {
     clearInterval(countdownInterval); 
     countdown = 4;
     updateCountdown();
@@ -52,7 +52,7 @@ function resetCountdown {
 }
 
 // This function is for starting the countdown 
-function startCountdown (){
+function startCountdown() {
     countdownInterval = setInterval(() => { 
         countdown--; 
         updateCountdown(); 
@@ -97,7 +97,7 @@ var slides = document.querySelectorAll(".slide");
 
 // Function for showing an image 
 function updateSlide() {
-   slides.forEach(function (slide) {
+   slides.forEach(function(slide) {
      // This is for hiding the images
         slide.classList.remove("active");
     });
