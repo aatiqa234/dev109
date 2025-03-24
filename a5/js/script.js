@@ -56,8 +56,10 @@ function startCountdown() {
     countdownInterval = setInterval(() => { 
         countdown--; 
         updateCountdown(); 
-        if (countdown === 0){
+        if (countdown === 0) {
+            clearInterval(countdownInterval);
             nextImage();
+            resetCountdown();
         }
     },1000);
 }
@@ -65,7 +67,7 @@ function startCountdown() {
 
 
 // It create slides and add them to the page 
-images.forEach(function(src, index)  {
+images.forEach(function(src, index) {
   // Create a <div> for each slide
     var slideDiv = document.createElement("div"); 
   // Give it the class 'slide'
@@ -128,13 +130,13 @@ function toggleAutoNext() {
   // When the auto-text is on
     if (isAutoNextEnabled) { 
       // Start auto-switching again
-        slideInterval = setInterval(nextImage, intervalTime); 
-    
-   } else {
-        clearInterval(slideInterval);
+        slideInterval = setInterval(() => {; 
+        nextImage();
+        resetCountdown();                                   
+     }, intervalTime);
     }
 }
-
+                                    
 
 // Add "Next" and "Previous" buttons
 document.getElementById("next").addEventListener("click", nextImage);
