@@ -29,8 +29,7 @@ var slideInterval;
 var intervalTime = 4000;
 var countdown = 4;
 var countdownInterval;
-
-
+var countdownDisplay = document.getElementById("countdownDisplay");
 
 // This function is for updating countdown 
 function updateCountdown() {
